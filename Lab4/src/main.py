@@ -11,7 +11,6 @@ HTMLDIR = os.path.abspath(
 
 def makeApp():
     endpoints=[
-        (),
     ]
     app = tornado.web.Application(endpoints, static_path=HTMLDIR)
     app.listen(8000)
