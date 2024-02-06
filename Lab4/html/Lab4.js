@@ -40,5 +40,17 @@ else{answer.push("failed")
 };
 
 console.log(answer);
+
+let tbl = document.getElementById("answers");
+
+let tr = document.createElement("tr");
+tbl.appendChild(tr);
+for(let j=0;j<answer.length;++j){
+    let td = document.createElement("td");
+    tr.appendChild(td);
+    let txt = document.createTextNode( answer[j] );
+    td.appendChild( txt );
 }
-Spin()
+
+
+}
