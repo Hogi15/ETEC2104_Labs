@@ -52,5 +52,16 @@ for(let j=0;j<answer.length;++j){
     td.appendChild( txt );
 }
 
+}
+
+function main(){
+    sock = new WebSocket("ws://"+document.location.host+"/sock");
+    sock.addEventListener("open", ()=>{ 
+        document.getElementById("spinbutton").disabled=0
+        console.log("SOCK IS OPEN");
+    });
+    sock.addEventListener("message", gotMessage);
 
 }
+
+main();
