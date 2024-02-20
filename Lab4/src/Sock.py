@@ -8,6 +8,8 @@ class Handler(tornado.websocket.WebSocketHandler):
 
     def on_message(self,msg):
         print("SERVER GOT:",msg)
+        for c in activeClients:
+            c.write_message(msg)
 
     def on_close(self):
         activeClients.remove(self)

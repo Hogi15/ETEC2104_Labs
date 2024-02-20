@@ -14,6 +14,11 @@ location = location - remainder;
 
 let ball = wheel[location];
 
+console.log(ball);
+sock.send(ball);
+
+function sendresult(event)
+let ball = event.data
 let answer = [ball, ];
 
 if (location%2){answer.push("Black")
@@ -62,7 +67,7 @@ function main(){
         document.getElementById("spinbutton").disabled=0
         console.log("SOCK IS OPEN");
     });
-    sock.addEventListener("message", gotMessage);
+    sock.addEventListener("message", sendresult);
 
 }
 
