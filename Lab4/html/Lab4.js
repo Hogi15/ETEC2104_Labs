@@ -19,6 +19,8 @@ sock.send(ball);
 
 }
 
+
+
 function sendresult(event){
 let ball = event.data
 let answer = [ball, ];
@@ -63,6 +65,8 @@ for(let j=0;j<answer.length;++j){
 
 }
 
+
+
 function main(){
     sock = new WebSocket("ws://"+document.location.host+"/sock");
     sock.addEventListener("open", ()=>{ 
@@ -72,5 +76,7 @@ function main(){
     sock.addEventListener("message", sendresult);
 
 }
+
+
 
 main();
