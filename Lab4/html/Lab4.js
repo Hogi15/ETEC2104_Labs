@@ -1,3 +1,5 @@
+let sock;
+
 function Spin(){
 
 let wheel = [0,34,10,21,28,4,18,9,27,22,
