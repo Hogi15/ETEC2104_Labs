@@ -17,7 +17,9 @@ let ball = wheel[location];
 console.log(ball);
 sock.send(ball);
 
-function sendresult(event)
+}
+
+function sendresult(event){
 let ball = event.data
 let answer = [ball, ];
 
