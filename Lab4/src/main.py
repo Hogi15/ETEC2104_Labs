@@ -1,6 +1,7 @@
 import asyncio
 import tornado.web
 import os.path
+import Sock
 
 HTMLDIR = os.path.abspath(
     os.path.join(
