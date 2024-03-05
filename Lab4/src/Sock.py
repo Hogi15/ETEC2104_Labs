@@ -5,6 +5,7 @@ activeClients=[]
 class Handler(tornado.websocket.WebSocketHandler):
     def open(self):
         print("THE CONNECTION IS OPEN ")
+        activeClients.append(self)
 
     def on_message(self,msg):
         print("SERVER GOT:",msg)
